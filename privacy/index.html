@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Forge</title>
+<meta name="description" content="Forge App Privacy Policy. We collect minimal data and store everything locally on your device.">
+<link rel="canonical" href="https://riseforge.app/privacy/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #FF6B1A;
+    --orange-bright: #FF8A3D;
+    --black: #0A0A0A;
+    --black-2: #111111;
+    --black-3: #1A1A1A;
+    --gray-3: #888888;
+    --gray-4: #BBBBBB;
+    --white: #FFFFFF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(10,10,10,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,107,26,0.15);
+    padding: 0 5vw;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: var(--orange);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--white); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--gray-4);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-links a.active { color: var(--orange); }
+
+  .nav-cta {
+    background: var(--orange) !important;
+    color: var(--black) !important;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600 !important;
+  }
+  .nav-cta:hover { background: var(--orange-bright) !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--white); border-radius: 2px;
+  }
+
+  .legal-hero {
+    padding: 120px 5vw 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: linear-gradient(180deg, rgba(255,107,26,0.04) 0%, transparent 100%);
+  }
+
+  .breadcrumb {
+    font-size: 13px;
+    color: var(--gray-3);
+    margin-bottom: 20px;
+  }
+  .breadcrumb a { color: var(--orange); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb span { margin: 0 8px; opacity: 0.4; }
+
+  .legal-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .legal-updated {
+    font-size: 14px;
+    color: var(--gray-3);
+  }
+  .legal-updated strong { color: var(--orange); font-weight: 500; }
+
+  .legal-body {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 60px 5vw 80px;
+  }
+
+  .legal-section { margin-bottom: 44px; }
+
+  .legal-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: var(--orange);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,107,26,0.15);
+  }
+
+  .legal-section p {
+    font-size: 15px;
+    color: var(--gray-4);
+    line-height: 1.85;
+    font-weight: 300;
+    margin-bottom: 14px;
+  }
+
+  .legal-section ul, .legal-section ol {
+    padding-left: 20px;
+    margin-bottom: 14px;
+  }
+
+  .legal-section li {
+    font-size: 15px;
+    color: var(--gray-4);
+    line-height: 1.85;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+
+  .legal-section strong {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .legal-section a {
+    color: var(--orange);
+    text-decoration: none;
+  }
+  .legal-section a:hover { text-decoration: underline; }
+
+  .legal-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.05);
+    margin: 0 0 44px;
+  }
+
+  .legal-highlight {
+    background: rgba(255,107,26,0.06);
+    border: 1px solid rgba(255,107,26,0.15);
+    border-left: 3px solid var(--orange);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .legal-highlight p { margin-bottom: 0; }
+
+  footer {
+    background: var(--black);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 32px 5vw;
+  }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-copy { font-size: 13px; color: var(--gray-3); }
+  .footer-copy a { color: var(--gray-3); text-decoration: none; margin-left: 20px; }
+  .footer-copy a:hover { color: var(--orange); }
+  .footer-nav { display: flex; gap: 20px; }
+  .footer-nav a { font-size: 13px; color: var(--gray-3); text-decoration: none; }
+  .footer-nav a:hover { color: var(--orange); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 64px; left: 0; right: 0; bottom: 0;
+      background: rgba(10,10,10,0.98);
+      padding: 40px 5vw;
+      gap: 24px;
+      z-index: 999;
+    }
+    .nav-links.open a { font-size: 18px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">FORGE<span>.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Home</a></li>
+    <li><a href="/#features">Features</a></li>
+    <li><a href="/support/">Support</a></li>
+    <li><a href="/privacy/" class="active">Privacy</a></li>
+    <li><a href="/terms/">Terms</a></li>
+    <li><a class="nav-cta" href="/#download">Get the App</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="legal-hero">
+  <div style="max-width: 780px; margin: 0 auto;">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      Privacy Policy
+    </div>
+    <h1>PRIVACY<br>POLICY</h1>
+    <p class="legal-updated">Last Updated: <strong>May 18, 2026</strong></p>
+  </div>
+</div>
+
+<div class="legal-body">
+
+  <div class="legal-section">
+    <h2>1. Introduction</h2>
+    <div class="legal-highlight">
+      <p>Forge is built with a privacy-first approach. We collect the bare minimum required to run the app — and most data never leaves your device.</p>
+    </div>
+    <p>Welcome to Forge ("we," "our," or "us"). This Privacy Policy explains how we handle information in connection with the Forge mobile application ("the App"). By downloading or using the App, you agree to the practices described here.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>2. Information We Collect</h2>
+    <p>Forge is designed with privacy-first principles. We collect minimal data necessary to operate the App:</p>
+    <ul>
+      <li><strong>Alarm Data:</strong> Alarm times, sounds, and scheduling preferences are stored locally on your device only. We do not have access to this data.</li>
+      <li><strong>Device Permissions:</strong> Forge may request notification permissions to deliver alarms. We do not collect, store, or transmit these permissions to external servers.</li>
+      <li><strong>Usage Data:</strong> We may collect anonymized, aggregated crash reports via Apple's built-in analytics tools, which are subject to Apple's own privacy policy.</li>
+      <li><strong>No Personal Information:</strong> Forge does not require account creation. We do not collect your name, email address, phone number, or any other personally identifiable information.</li>
+    </ul>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>3. How We Use Information</h2>
+    <p>The limited information we collect is used solely to:</p>
+    <ul>
+      <li>Operate and deliver alarm functionality on your device</li>
+      <li>Improve app stability and fix bugs via crash reporting</li>
+      <li>Respond to support inquiries if you contact us voluntarily</li>
+    </ul>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>4. Data Sharing and Disclosure</h2>
+    <p>We do not sell, trade, or rent your information to third parties. We may disclose information only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Legal Requirements:</strong> If required by law, regulation, or valid legal process.</li>
+      <li><strong>Service Providers:</strong> Apple's App Store and associated infrastructure may process technical data as part of app delivery, governed by Apple's Privacy Policy.</li>
+      <li><strong>Business Transfers:</strong> In the event of a merger or acquisition, user data (if any) may be transferred to the successor entity under the same privacy terms.</li>
+    </ul>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>5. Data Retention and Security</h2>
+    <p>All alarm and preference data lives locally on your device and is removed when you delete the App. We do not maintain centralized databases of user information. While we take reasonable precautions to protect your data, no method of electronic storage is 100% secure.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>6. Children's Privacy</h2>
+    <p>Forge is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided information to us, please contact us and we will promptly delete it.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>7. Your Rights</h2>
+    <p>Depending on your jurisdiction, you may have certain rights regarding your data, including the right to access, correct, or delete it. Since Forge stores data locally on your device, you can exercise these rights by managing or deleting the App directly. For questions, contact us at <a href="mailto:privacy@riseforge.app">privacy@riseforge.app</a>.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify users of material changes by updating the "Last Updated" date above. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>9. Contact</h2>
+    <p>For privacy-related questions or concerns, please contact us at:</p>
+    <p><a href="mailto:riseforgeapp@gmail.com">riseforgeapp@gmail.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      © 2026 Forge App. All rights reserved.
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+    </div>
+    <div class="footer-nav">
+      <a href="/">← Back to Home</a>
+      <a href="/terms/">Terms of Service</a>
+      <a href="/support/">Support</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
