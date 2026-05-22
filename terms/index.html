@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Support — Forge</title>
-<meta name="description" content="Forge App Support. Get help with alarms, sounds, and common questions. Contact us directly.">
-<link rel="canonical" href="https://riseforge.app/support/">
+<title>Terms of Service — Forge</title>
+<meta name="description" content="Forge App Terms of Service. Read our terms before using the Forge alarm application.">
+<link rel="canonical" href="https://riseforge.app/terms/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
@@ -16,8 +16,6 @@
     --black: #0A0A0A;
     --black-2: #111111;
     --black-3: #1A1A1A;
-    --gray-1: #2E2E2E;
-    --gray-2: #444444;
     --gray-3: #888888;
     --gray-4: #BBBBBB;
     --white: #FFFFFF;
@@ -94,7 +92,7 @@
     background: var(--white); border-radius: 2px;
   }
 
-  .support-hero {
+  .legal-hero {
     padding: 120px 5vw 60px;
     border-bottom: 1px solid rgba(255,255,255,0.05);
     background: linear-gradient(180deg, rgba(255,107,26,0.04) 0%, transparent 100%);
@@ -109,210 +107,80 @@
   .breadcrumb a:hover { text-decoration: underline; }
   .breadcrumb span { margin: 0 8px; opacity: 0.4; }
 
-  .support-hero h1 {
+  .legal-hero h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(40px, 6vw, 72px);
     letter-spacing: 2px;
     line-height: 1;
     margin-bottom: 12px;
   }
-  .support-hero p {
-    font-size: 17px;
-    color: var(--gray-4);
-    font-weight: 300;
-  }
-  .support-hero p strong { color: var(--orange); font-weight: 500; }
 
-  .support-body {
-    max-width: 900px;
+  .legal-updated { font-size: 14px; color: var(--gray-3); }
+  .legal-updated strong { color: var(--orange); font-weight: 500; }
+
+  .legal-body {
+    max-width: 780px;
     margin: 0 auto;
     padding: 60px 5vw 80px;
   }
 
-  .section-label {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+  .legal-section { margin-bottom: 44px; }
+
+  .legal-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
     color: var(--orange);
     margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,107,26,0.15);
   }
 
-  .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(28px, 4vw, 44px);
-    line-height: 1;
-    letter-spacing: 1px;
-    margin-bottom: 32px;
-  }
-
-  .support-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-    margin-bottom: 64px;
-  }
-
-  .support-card {
-    background: var(--black-3);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 14px;
-    padding: 28px;
-    transition: border-color 0.3s, transform 0.2s;
-  }
-  .support-card:hover {
-    border-color: rgba(255,107,26,0.3);
-    transform: translateY(-2px);
-  }
-  .support-card-icon { font-size: 28px; margin-bottom: 14px; }
-  .support-card h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 18px;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-  .support-card p {
-    font-size: 14px;
-    color: var(--gray-3);
-    line-height: 1.6;
+  .legal-section p {
+    font-size: 15px;
+    color: var(--gray-4);
+    line-height: 1.85;
     font-weight: 300;
     margin-bottom: 14px;
   }
-  .support-card a {
-    color: var(--orange);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  .support-card a:hover { text-decoration: underline; }
 
-  .faq-block { margin-bottom: 64px; }
-
-  .faq-item {
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    padding: 20px 0;
+  .legal-section ul, .legal-section ol {
+    padding-left: 20px;
+    margin-bottom: 14px;
   }
 
-  .faq-q {
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    user-select: none;
-    transition: color 0.2s;
-  }
-  .faq-q:hover { color: var(--orange); }
-
-  .faq-arrow {
-    font-size: 18px;
-    color: var(--orange);
-    transition: transform 0.3s;
-    flex-shrink: 0;
-  }
-
-  .faq-a {
-    font-size: 14px;
-    color: var(--gray-3);
-    line-height: 1.7;
-    font-weight: 300;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s;
-  }
-  .faq-item.open .faq-arrow { transform: rotate(180deg); }
-  .faq-item.open .faq-a { max-height: 200px; padding-top: 12px; }
-
-  .contact-block { margin-bottom: 40px; }
-
-  .contact-form {
-    background: var(--black-3);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 16px;
-    padding: 40px;
-    max-width: 620px;
-    margin-top: 24px;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
-  .form-group { margin-bottom: 20px; }
-
-  .form-group label {
-    display: block;
-    font-size: 12px;
-    font-weight: 600;
+  .legal-section li {
+    font-size: 15px;
     color: var(--gray-4);
-    letter-spacing: 1px;
+    line-height: 1.85;
+    font-weight: 300;
     margin-bottom: 8px;
-    text-transform: uppercase;
   }
 
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-    background: var(--black-2);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 8px;
-    padding: 12px 16px;
-    color: var(--white);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    transition: border-color 0.2s;
-    outline: none;
-    -webkit-appearance: none;
-  }
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus { border-color: var(--orange); }
-  .form-group input::placeholder,
-  .form-group textarea::placeholder { color: var(--gray-2); }
-  .form-group textarea { resize: vertical; min-height: 120px; }
-  .form-group select {
-    cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    padding-right: 36px;
-  }
-  .form-group select option { background: var(--black-2); }
+  .legal-section strong { color: var(--white); font-weight: 500; }
 
-  .btn-submit {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: var(--orange);
-    color: var(--black);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 14px 28px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    width: 100%;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn-submit:hover { background: var(--orange-bright); transform: translateY(-1px); }
-  .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .legal-section a { color: var(--orange); text-decoration: none; }
+  .legal-section a:hover { text-decoration: underline; }
 
-  .form-success {
-    display: none;
-    background: rgba(255,107,26,0.08);
-    border: 1px solid rgba(255,107,26,0.25);
-    border-radius: 8px;
-    padding: 14px 20px;
-    font-size: 14px;
-    color: var(--orange-bright);
-    margin-top: 16px;
+  .legal-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.05);
+    margin: 0 0 44px;
+  }
+
+  .legal-warning {
+    background: rgba(255,107,26,0.06);
+    border: 1px solid rgba(255,107,26,0.2);
+    border-left: 3px solid var(--orange);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .legal-warning p {
+    font-size: 13px;
+    color: var(--gray-4);
+    margin-bottom: 0;
+    font-style: italic;
   }
 
   footer {
@@ -348,8 +216,6 @@
       z-index: 999;
     }
     .nav-links.open a { font-size: 18px; }
-    .form-row { grid-template-columns: 1fr; }
-    .contact-form { padding: 24px; }
     .footer-bottom { flex-direction: column; align-items: flex-start; }
   }
 </style>
@@ -361,9 +227,9 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="/">Home</a></li>
     <li><a href="/#features">Features</a></li>
-    <li><a href="/support/" class="active">Support</a></li>
+    <li><a href="/support/">Support</a></li>
     <li><a href="/privacy/">Privacy</a></li>
-    <li><a href="/terms/">Terms</a></li>
+    <li><a href="/terms/" class="active">Terms</a></li>
     <li><a class="nav-cta" href="/#download">Get the App</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
@@ -371,156 +237,105 @@
   </div>
 </nav>
 
-<div class="support-hero">
-  <div style="max-width: 900px; margin: 0 auto;">
+<div class="legal-hero">
+  <div style="max-width: 780px; margin: 0 auto;">
     <div class="breadcrumb">
       <a href="/">Home</a>
       <span>/</span>
-      Support
+      Terms of Service
     </div>
-    <h1>SUPPORT</h1>
-    <p>We're here to help. Average response time: <strong>within 24 hours</strong></p>
+    <h1>TERMS OF<br>SERVICE</h1>
+    <p class="legal-updated">Last Updated: <strong>May 18, 2026</strong></p>
   </div>
 </div>
 
-<div class="support-body">
+<div class="legal-body">
 
-  <!-- CONTACT CARDS -->
-  <div class="section-label">Get in Touch</div>
-  <div class="section-title">HOW CAN WE HELP?</div>
-
-  <div class="support-grid">
-    <div class="support-card">
-      <div class="support-card-icon">📧</div>
-      <h3>General Support</h3>
-      <p>Reach our team for any issue, bug report, or feature request.</p>
-      <a href="mailto:riseforgeapp@gmail.com">riseforgeapp@gmail.com →</a>
-    </div>
-    <div class="support-card">
-      <div class="support-card-icon">🔒</div>
-      <h3>Privacy Questions</h3>
-      <p>Questions about data handling, privacy, or your rights.</p>
-      <a href="mailto:riseforgeapp@gmail.com">riseforgeapp@gmail.com →</a>
-    </div>
-    <div class="support-card">
-      <div class="support-card-icon">⚖️</div>
-      <h3>Legal Inquiries</h3>
-      <p>Terms of service, copyright, licensing, or legal matters.</p>
-      <a href="mailto:riseforgeapp@gmail.com">riseforgeapp@gmail.com →</a>
-    </div>
+  <div class="legal-section">
+    <h2>1. Acceptance of Terms</h2>
+    <p>By downloading, installing, or using the Forge mobile application ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
   </div>
 
-  <!-- FAQ -->
-  <div class="faq-block">
-    <div class="section-label">Common Questions</div>
-    <div class="section-title">FAQ</div>
+  <div class="legal-divider"></div>
 
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        My alarm didn't go off — what happened?
-        <span class="faq-arrow">▾</span>
-      </div>
-      <div class="faq-a">iOS requires notification permissions for alarms to fire reliably. Check Settings → Notifications → Forge. Also ensure your device is not in Focus or Do Not Disturb mode. If your hardware silent switch is on, alarm audio may be suppressed.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        How do I preview alarm sounds?
-        <span class="faq-arrow">▾</span>
-      </div>
-      <div class="faq-a">When creating or editing an alarm, tap the sound name to open the sound picker. Tap any sound in the list to preview it. Select and save once you find the right one.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        Can I set different sounds for different alarms?
-        <span class="faq-arrow">▾</span>
-      </div>
-      <div class="faq-a">Yes. Each alarm can have its own custom sound, completely independent. Forge on weekdays, Metal on weekends — no problem.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        Does Forge work when my phone is on silent?
-        <span class="faq-arrow">▾</span>
-      </div>
-      <div class="faq-a">For reliable audio, we recommend keeping your device off silent mode when alarms are set. Forge alarms follow iOS notification guidelines and behavior may vary by iOS version and device settings.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        Is Forge free? Any in-app purchases?
-        <span class="faq-arrow">▾</span>
-      </div>
-      <div class="faq-a">Forge is completely free. No subscriptions, no in-app purchases, no ads. All sounds and features are included.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        How do I delete an alarm?
-        <span class="faq-arrow">▾</span>
-      </div>
-      <div class="faq-a">Swipe left on any alarm in the list to reveal the delete option, then tap Delete.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        I found a bug — how do I report it?
-        <span class="faq-arrow">▾</span>
-      </div>
-      <div class="faq-a">Email riseforgeapp@gmail.com with your device model, iOS version, and a description of what happened. Screenshots or screen recordings help us resolve issues much faster.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        What iOS versions does Forge support?
-        <span class="faq-arrow">▾</span>
-      </div>
-      <div class="faq-a">Forge requires iOS 15.0 or later. We recommend keeping your device updated to the latest iOS version for the best experience.</div>
-    </div>
+  <div class="legal-section">
+    <h2>2. Description of Service</h2>
+    <p>Forge is a mobile alarm application for iOS that allows users to set alarms, select custom alarm sounds, and manage alarm schedules. The App is provided free of charge.</p>
   </div>
 
-  <!-- CONTACT FORM -->
-  <div class="contact-block">
-    <div class="section-label">Send a Message</div>
-    <div class="section-title">STILL NEED HELP?</div>
-    <p style="font-size: 15px; color: var(--gray-3); font-weight: 300; margin-bottom: 0;">Fill out the form and we'll get back to you within 24 hours.</p>
+  <div class="legal-divider"></div>
 
-    <div class="contact-form">
-      <div class="form-row">
-        <div class="form-group">
-          <label>Name</label>
-          <input type="text" placeholder="Your name" id="cf-name">
-        </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" placeholder="your@email.com" id="cf-email">
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Topic</label>
-        <select id="cf-category">
-          <option value="">Select a topic...</option>
-          <option value="bug">Bug Report</option>
-          <option value="alarm">Alarm Not Working</option>
-          <option value="sound">Sound / Audio Issue</option>
-          <option value="feature">Feature Request</option>
-          <option value="privacy">Privacy / Data Question</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Describe your issue or question..." id="cf-message"></textarea>
-      </div>
-      <button class="btn-submit" id="submitBtn" onclick="submitForm()">
-        Send Message
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-      </button>
-      <div class="form-success" id="formSuccess">
-        ✓ Message sent! We'll get back to you within 24 hours.
-      </div>
+  <div class="legal-section">
+    <h2>3. License</h2>
+    <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the App for personal, non-commercial purposes on Apple-branded devices you own or control. You may not:</p>
+    <ul>
+      <li>Copy, modify, or distribute the App or any portion thereof</li>
+      <li>Reverse engineer, decompile, or disassemble the App</li>
+      <li>Use the App for any unlawful purpose</li>
+      <li>Rent, lease, or sell access to the App</li>
+      <li>Remove or alter any proprietary notices or labels</li>
+    </ul>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>4. User Conduct</h2>
+    <p>You agree to use the App only for lawful purposes and in a manner that does not infringe the rights of others. You are solely responsible for ensuring the App's alarm functions meet your individual needs, including for time-sensitive situations.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>5. Intellectual Property</h2>
+    <p>All content, design, graphics, sounds, logos, and code within the App are the intellectual property of Forge App or its licensors. Nothing in these Terms transfers any intellectual property rights to you. The "Forge" name and logo are trademarks of Forge App.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>6. Disclaimer of Warranties</h2>
+    <div class="legal-warning">
+      <p>The App is provided "as is" and "as available" without warranties of any kind. We do not warrant that alarms will fire in all circumstances, including device silent mode, low battery, or operating system restrictions. Reliance on the App for critical wake-up events is at your own risk.</p>
     </div>
+    <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, FORGE APP EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>7. Limitation of Liability</h2>
+    <p>TO THE FULLEST EXTENT PERMITTED BY LAW, FORGE APP SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF INCOME, MISSED APPOINTMENTS, OR ANY DAMAGES RESULTING FROM FAILURE OF AN ALARM TO ACTIVATE.</p>
+    <p>OUR TOTAL LIABILITY TO YOU FOR ANY CLAIM SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE APP IN THE TWELVE MONTHS PRECEDING THE CLAIM (WHICH, FOR A FREE APP, IS ZERO DOLLARS).</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>8. Third-Party Services</h2>
+    <p>The App is distributed through the Apple App Store. Your use of the App Store is subject to Apple's Terms of Service. We are not responsible for Apple's services, policies, or practices.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>9. Modifications</h2>
+    <p>We reserve the right to modify, suspend, or discontinue the App at any time without notice. We may also update these Terms at any time. Continued use of the App after any changes constitutes your acceptance of the updated Terms.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>10. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with applicable law. Any disputes arising from these Terms or your use of the App shall be resolved through binding arbitration or in courts of competent jurisdiction.</p>
+  </div>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-section">
+    <h2>11. Contact</h2>
+    <p>For questions about these Terms, contact us at:</p>
+    <p><a href="mailto:riseforgeapp@gmail.com">riseforgeapp@gmail.com</a></p>
   </div>
 
 </div>
@@ -535,49 +350,10 @@
     <div class="footer-nav">
       <a href="/">← Back to Home</a>
       <a href="/privacy/">Privacy Policy</a>
-      <a href="/terms/">Terms of Service</a>
+      <a href="/support/">Support</a>
     </div>
   </div>
 </footer>
-
-<script>
-  function toggleFaq(el) {
-    const item = el.parentElement;
-    const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
-  }
-
-  function submitForm() {
-    const name = document.getElementById('cf-name').value.trim();
-    const email = document.getElementById('cf-email').value.trim();
-    const message = document.getElementById('cf-message').value.trim();
-
-    if (!name || !email || !message) {
-      alert('Please fill in your name, email, and message.');
-      return;
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      alert('Please enter a valid email address.');
-      return;
-    }
-
-    const btn = document.getElementById('submitBtn');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      document.getElementById('formSuccess').style.display = 'block';
-      btn.textContent = '✓ Sent';
-      btn.style.background = '#2a7a2a';
-      document.getElementById('cf-name').value = '';
-      document.getElementById('cf-email').value = '';
-      document.getElementById('cf-category').value = '';
-      document.getElementById('cf-message').value = '';
-    }, 1200);
-  }
-</script>
 
 </body>
 </html>
